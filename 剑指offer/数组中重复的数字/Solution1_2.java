@@ -11,6 +11,11 @@ public class Solution {
         if (numbers == null || length <= 0){
             return false;
         }
+        for (int i = 0; i < length; i++){
+            if (numbers[i] < 0 || numbers[i] > length - 1){
+                return false;
+            }
+        }
         boolean[] k = new boolean[length];
         for (int i = 0; i < length; i++){
             if (k[numbers[i]] == true){

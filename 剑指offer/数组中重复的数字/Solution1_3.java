@@ -4,6 +4,11 @@ public class Solution {
             return false;
         }
         for (int i = 0; i < length; i++){
+            if (numbers[i] < 0 || numbers[i] > length - 1){
+                return false;
+            }
+        }
+        for (int i = 0; i < length; i++){
             int m = numbers[i];
             while (numbers[i] != i){
                 if (numbers[i] == numbers[numbers[i]]){

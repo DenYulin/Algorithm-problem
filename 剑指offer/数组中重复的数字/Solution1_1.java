@@ -13,6 +13,11 @@ public class Solution {
         if (numbers == null || length <= 0){
             return false;
         }
+        for (int i = 0; i < length; i++){
+            if (numbers[i] < 0 || numbers[i] > length - 1){
+                return false;
+            }
+        }
         Arrays.sort(numbers);
         for (int i = 1; i < length; i++){
             if (numbers[i - 1] == numbers[i]){
